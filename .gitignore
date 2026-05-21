@@ -1,1 +1,13 @@
-docs/README.md
+# Excel and Office temp files
+~$*.xlsx
+~$*.xls
+~$*.docx
+~$*.pptx
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor backups
+*.tmp
+*.bak
