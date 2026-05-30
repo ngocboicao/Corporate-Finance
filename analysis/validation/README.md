@@ -1,5 +1,5 @@
 # analysis/validation/
 
-Formal validation reports (Stage 3).
+Self-audit reports — independent recomputation of model outputs and verification against the LLM's stated values.
 
-Each report documents how a model's outputs were tested: what the expected results were, which edge cases I ran, where the numbers diverged, and how I resolved the gaps. The point is to make the model's reliability legible to someone who didn't build it — an auditor, the instructor, or future me reopening this a semester later.
+The Stage 5 verification table here (`YYYY-MM-DD-{lastname}-{company}-stage5-verification.md`) recomputes at least five ratios by hand from the Stage 3 statement data and compares them to the Stage 5 LLM output, with a one-line note on each match or mismatch. The hand arithmetic is the discipline check — it's how the LLM gets audited rather than trusted.
