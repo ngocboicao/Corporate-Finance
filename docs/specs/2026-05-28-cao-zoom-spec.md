@@ -188,7 +188,7 @@ All formulas in named-range notation. Division-bearing formulas are wrapped in `
 The executor must verify each of the following:
 
 1. **Balance-sheet balance (both years):** `BAL_assets_total_curr` = `BAL_liabilities_total_curr + BAL_equity_shareholders_curr` (expect 10,988.421); same for prior (expect 9,929.793).
-2. **Income tie-out:** `INC_ebit` must equal Zoom's reported income from operations, 813.295. NOTE: Zoom's D&A is already embedded inside cost of revenue and operating expenses, so `INC_depreciation` is set to 0 to avoid double-counting; otherwise EBIT would be understated by ~122.6.
+2. **Income tie-out:** `INC_ebit` expected = **813.295** (Zoom's reported income from operations). NOTE: Zoom's D&A is already embedded inside cost of revenue and operating expenses, so `INC_depreciation` is set to 0 to avoid double-counting; otherwise EBIT would be understated by ~122.6.
 3. **Net income tie-out:** `INC_net` = 1,010.238.
 4. **Du Pont cross-check:** ROA (Du Pont) must equal direct ROA; ROE (Du Pont) must reconcile to direct ROE within rounding.
 5. **Zero-error rule:** no `#REF!`, `#DIV/0!`, or `#NAME?` anywhere on the Ratios tab.
