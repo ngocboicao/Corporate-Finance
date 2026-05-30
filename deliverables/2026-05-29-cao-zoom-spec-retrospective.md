@@ -84,3 +84,13 @@ For the next spec I write - whether for Zoom in a future year, a different compa
 Filling out this template surfaced something a free-form retrospective would have hidden: the asymmetry between Part A (no defects) and Part B (multiple gaps) only became unmistakable once I had to assign a row-level verdict to every section. In an open write-up I would have written "the spec mostly worked but had some interpretation gaps" - the table forced me to count, and counting changed the conclusion. The "Symptom in Stage 5 output" column was the most disciplining element; it made impressionistic critique impossible.
 
 One structural change I would propose: add a row for "Cross-section interactions" - cases where two individually-clear sections combine to produce a gap. My B.8 hallucination is partly a B.8 problem and partly an A.3 problem (no peer data supplied). The current row-per-section structure forces single-row attribution when the real defect is the interaction.
+
+---
+
+## 7. Instructor feedback received post-submission
+
+After Stage 4 submission, the instructor opened a non-blocking review PR (`docs/feedback/stage4-review-2026-05-29.md`) confirming the spec met all four rubric criteria with no shortfalls. The review specifically singled out the D&A double-count catch (now V2 / V6) and the prompt log's editorial-control framing as differentiators.
+
+The instructor offered four forward-looking refinements: (1) trim the YAML frontmatter to load-bearing fields; (2) generalize the after-tax operating income formula to `INC_ebit * (1 - tax_rate)`; (3) inline the expected EBIT value in Validation Rule V2; and (4) inline the structure of the capital-allocation recommendation in Section 10.
+
+**None overlap with the three gaps I self-identified above** (peer benchmarks, magnitude precision, Du Pont reconciliation attribution); the gap sets are complementary. After reviewing each suggestion against Zoom's specific structure, I applied suggestion 3 (V2 now states `INC_ebit` expected = 813.295, matching V1's pattern). I considered suggestion 2 (generalizing the operating-income formula) but did not adopt it: `INC_ebit * (1 - tax_rate)` and `INC_net + (1 - tax_rate) * INC_interest_expense` are mathematically equivalent only when "other income" is immaterial; for Zoom, gains on strategic investments and other income total $502.3M, so the two forms produce different downstream ratio values. Adopting the textbook form would have required restating every dependent ratio in Section 6 and would have made the spec less faithful to Zoom's reported economics. I am carrying forward suggestions 1 and 4 as lessons for future specs (noted in the Forward link section).
